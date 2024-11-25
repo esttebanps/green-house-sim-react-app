@@ -1,9 +1,15 @@
 
-const Header: React.FC = () => {
+type Props = {
+    text: string;
+    subText: string;
+    subtitle: string;
+}
+
+const Header: React.FC<Props> = ({ text, subText, subtitle }) => {
     return (
         <header>
-            <h1>Welcome to <span>GreenHouse Sim 🪴 !</span></h1>
-            <p>Here you can create and care for your own virtual plant</p>
+            <h1>{text} <span>{subText}</span></h1>
+            <p>{subtitle}</p>
         </header>
     )
 }

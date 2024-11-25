@@ -15,7 +15,7 @@ body>div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 header {
@@ -227,4 +227,129 @@ header p {
 
 .active {
   color: white;
+}
+
+.menu-plant {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  list-style: none;
+}
+
+.menu-plant .item {
+  text-decoration: none;
+  color: var(--black);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.active-plant {
+  border-bottom: var(--green) 2px solid;
+}
+
+.background-plant {
+  width: 260;
+  height: fit-content;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  position: relative;
+}
+
+.background-plant .background {
+  position: absolute;
+  top: 30px;
+}
+
+.succulent {
+  position: absolute;
+  top: 0; 
+}
+
+.succulent {
+  transition: .2s ease-in-out;
+  animation: plant 1s ease-in infinite;
+}
+
+@keyframes plant {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, -5px);
+  }
+}
+
+.btn-3 {
+  position: absolute;
+  top: 0px;
+  left:150px;
+  cursor: pointer;
+  border: 1px solid var(--green);
+  background: white;
+  padding: .4rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.dashboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.background-dashboard {
+  position: absolute;
+  top: 200px;
+}
+
+.plant-dashboard {
+  top: 300px;
+}
+
+.btn-4 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: 5px solid var(--green);
+  background: white;
+  padding: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  z-index: 2;
+}
+
+.btn-left:active {
+  background: rgb(159, 214, 250);
+  color: white;
+}
+
+.btn-right:active {
+  background: rgb(241, 207, 111);
+  color: white;
+}
+
+.btn-left {
+  right: 150px;
+  top: 215px;
+  color: rgb(59, 170, 245);
+}
+
+.btn-right {
+  left: 185px;
+  top: 365px;
+  color: rgb(241, 207, 111);;
+
 }
